@@ -1,7 +1,7 @@
 @import '../../theme.css';
 
 .create-icon {
-  font-size: 2rem;
+  font-size: 5rem;
 }
 
 .create-button {
@@ -10,8 +10,9 @@
   border-radius: 4px;
   background-color: white;
   width: var(--card-width);
-  height: var(--card-small-height);
+  height: var(--card-height);
   margin: var(--card-margin);
+  cursor: pointer;
 }
 
 .create-button:hover {
