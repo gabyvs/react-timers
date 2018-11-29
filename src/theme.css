@@ -1,3 +1,27 @@
 :root {
-  --black: #393939;
+  /* colors*/
+  --primary: #9C27B0;
+  --primary--dark: #7B1FA2;
+  --primary-light: #E1BEE7;
+  --secondary-light: #ECECEC;
+  --accent: #CDDC39;
+  --divider: #BDBDBD;
+  --focus: #4f9fcf;
+  --error: #dc3545;
+  --error-light: #f8d7da;
+
+  /* font colors */
+  --primary-text: #212121;
+  --secondary-text: #353535;
+  --icons-text: #FFFFFF;
+  --forms-text: #495057;
+
+  /* fonts */
+  --regular-font-size: 1.6rem;
+
+  /* sizes */
+  --card-small-height: 150px;
+  --card-width: 300px;
+  --card-height: 300px;
+  --card-margin: 0 50px 20px 0;
 }

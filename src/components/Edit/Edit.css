@@ -1,0 +1,98 @@
+@import '../../theme.css';
+
+.edit fieldset {
+  border: none;
+}
+
+.edit {
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  padding: 15px 15px 0px 15px;
+  width: var(--card-width);
+  height: var(--card-height);
+  margin: var(--card-margin);
+}
+
+.edit .row {
+  margin-bottom: 10px;
+}
+
+.edit label {
+  display: block;
+  margin-bottom: 5px;
+  padding-left: 5px;
+}
+
+.edit input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid var(--divider);
+  font-size: var(--regular-font-size);
+  color: var(--forms-text);
+}
+
+.edit input:focus {
+  outline: none;
+  border: 1px solid var(--focus);
+}
+
+.edit .button-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.edit .save-btn,
+.edit .cancel-btn,
+.edit .reset-btn,
+.edit .delete-btn {
+  font-size: var(--regular-font-size);
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit .save-btn {
+  color: var(--primary);
+}
+
+.edit .save-btn:hover {
+  background-color: var(--primary-light);
+}
+
+.edit .cancel-btn {
+  color: var(--secondary-text);
+}
+
+.edit .cancel-btn:hover {
+  background-color: var(--secondary-light);
+}
+
+.edit .divider {
+  border: 0.5px solid var(--accent);
+}
+
+.edit .reset-btn {
+  color: var(--secondary-text);
+  display: block;
+}
+
+.edit .reset-btn:hover {
+  background-color: var(--secondary-light);
+}
+
+.edit .delete-btn {
+  color: var(--error);
+}
+
+.edit .delete-btn:hover {
+  background-color: var(--error-light);
+}
+
+.edit .delete-btn,
+.edit .reset-btn {
+  width: 100%;
+}

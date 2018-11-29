@@ -1,0 +1,77 @@
+@import '../../theme.css';
+
+.timer {
+  width: var(--card-width);
+  height: var(--card-height);
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  padding: 20px;
+  margin: var(--card-margin);
+  cursor: pointer;
+}
+
+.timer.running {
+  background-color: var(--primary);
+  color: var(--icons-text);
+}
+
+.timer.running .upper {
+  font-size: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 100%;
+}
+
+.timer.running .lower {
+  text-align: center;
+  width: 100%;
+}
+
+.timer.running .title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.timer.stopped {
+  height: var(--card-small-height);
+  padding: 30px 20px;
+}
+
+.timer.stopped:hover {
+  background-color: var(--primary-light);
+}
+
+.timer.stopped .title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.timer.stopped .project,
+.timer.stopped .time {
+  color: var(--secondary-text);
+  margin-bottom: 5px;
+}
+
+.timer .left {
+  float: left;
+}
+
+.timer .right {
+  float: right;
+  margin-top: 22px;
+}
+
+.timer .more {
+  border-radius: 50%;
+  padding: 10px 12px;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  cursor: pointer;
+}
+
+.timer .more:hover {
+  background-color: var(--primary);
+  color: var(--icons-text);
+}

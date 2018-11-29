@@ -1,0 +1,19 @@
+@import '../../theme.css';
+
+.create-icon {
+  font-size: 2rem;
+}
+
+.create-button {
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  background-color: white;
+  width: var(--card-width);
+  height: var(--card-small-height);
+  margin: var(--card-margin);
+}
+
+.create-button:hover {
+  background-color: var(--primary-light);
+}

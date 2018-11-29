@@ -1,0 +1,19 @@
+@import '../../theme.css';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary);
+  color: Var(--icons-text);
+}
+
+.header-content {
+  margin: 20px 100px;
+}
+
+.header-text {
+  font-size: 2rem;
+}
+
