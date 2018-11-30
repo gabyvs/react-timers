@@ -79,6 +79,7 @@
 .edit .reset-btn {
   color: var(--secondary-text);
   display: block;
+  margin-bottom: 2px;
 }
 
 .edit .reset-btn:hover {
@@ -96,4 +97,17 @@
 .edit .delete-btn,
 .edit .reset-btn {
   width: 100%;
+}
+
+.edit .cancel-btn:focus,
+.edit .reset-btn:focus {
+  box-shadow: 0 0 0.2rem rgba(108,117,125,.5);
+}
+
+.edit .save-btn:focus {
+  box-shadow: 0 0 0.2rem rgba(122, 53, 125, 0.5);
+}
+
+.edit .delete-btn:focus {
+  box-shadow: 0 0 0.2rem rgba(125, 0, 19, 0.5);
 }

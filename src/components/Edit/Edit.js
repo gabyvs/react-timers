@@ -52,10 +52,10 @@ class Edit extends React.Component {
           </div>
           <div className="row button-row">
             <button
-              className="cancel-btn"
+              className="btn cancel-btn"
               onClick={this.props.onClickCancel}>Cancel</button>
             <button
-              className="save-btn"
+              className="btn save-btn"
               onClick={this.onClickSave}>{btnText}</button>
           </div>
           {
@@ -64,10 +64,10 @@ class Edit extends React.Component {
               <>
                 <hr className="divider"/>
                 <button
-                  className="reset-btn"
+                  className="btn reset-btn"
                   onClick={this.onClickReset}>Reset</button>
                 <button
-                  className="delete-btn"
+                  className="btn delete-btn"
                   onClick={this.onClickDelete}>Delete</button>
               </>
             )

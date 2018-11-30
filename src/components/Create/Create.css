@@ -5,7 +5,7 @@
 }
 
 .create-button {
-  color: var(--primary);
+  color: var(--primary-light);
   border: 1px solid var(--primary);
   border-radius: 4px;
   background-color: white;
@@ -16,5 +16,6 @@
 }
 
 .create-button:hover {
-  background-color: var(--primary-light);
+  box-shadow: var(--std-shadow);
+  color: var(--primary);
 }

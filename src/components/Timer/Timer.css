@@ -9,10 +9,11 @@
   margin: var(--card-margin);
   cursor: pointer;
   background-color: white;
+  position: relative;
 }
 
 .timer:hover {
-  background-color: var(--primary-light);
+  box-shadow: var(--std-shadow);
 }
 
 .timer.running {
@@ -21,8 +22,7 @@
 }
 
 .timer.running:hover {
-  background-color: var(--primary-light);
-  color: var(--icons-text);
+  box-shadow: var(--strong-shadow);
 }
 
 .timer .upper {
@@ -30,7 +30,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50%;
+  height: 60%;
   width: 100%;
   color: var(--secondary-light);
 }
@@ -46,7 +46,9 @@
 }
 
 .timer .more {
-  margin-top: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
   border-radius: 50%;
   padding: 11px 12px;
   color: var(--icons-text);
@@ -54,6 +56,11 @@
   background-color: var(--accent);
   cursor: pointer;
 }
+
+.timer .more:hover {
+  box-shadow: var(--std-shadow);
+}
+
 
 .timer .more-icon {
   font-size: 1.5rem;

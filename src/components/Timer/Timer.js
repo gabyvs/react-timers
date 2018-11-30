@@ -40,20 +40,20 @@ class Timer extends React.Component {
       <div
         className={timerClass}
         onClick={this.onClickComponent}>
+        {
+          !this.state.isRunning &&
+          <button
+            className="more"
+            onClick={this.onClickEdit}>
+            <i className="fas fa-ellipsis-h more-icon"></i>
+          </button>
+        }
         <div className="upper">
           <span>{elapsedStr}</span>
         </div>
         <div className="lower">
           <div className="title">{this.props.title}</div>
           <div className="project">{this.props.project}</div>
-          {
-            !this.state.isRunning &&
-            <button
-              className="more"
-              onClick={this.onClickEdit}>
-              <i className="fas fa-ellipsis-h more-icon"></i>
-            </button>
-          }
         </div>
       </div>
     );
