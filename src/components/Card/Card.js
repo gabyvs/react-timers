@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Timer from '../Timer/Timer';
 import Edit from '../Edit/Edit';
 
@@ -8,21 +7,41 @@ class Card extends React.Component {
     isEditing: false
   };
 
+  onClickSave = (timer) => {
+    this.props.onClickSave(timer);
+    this.setState({ isEditing: false });
+  };
+
+  onClickCancel = () => {
+    this.setState({ isEditing: false });
+  };
+
+  onClickEdit = () => {
+    this.setState({ isEditing: true });
+  };
+
+  onClickDelete = (timerId) => {
+    this.props.onClickDelete(timerId);
+    this.setState({ isEditing: false });
+  };
+
+  onClickReset = (timerId) => {
+    this.props.onClickReset(timerId);
+    this.setState({ isEditing: false });
+  };
+
   render() {
     return this.state.isEditing ?
       <Edit
-        {...this.props} /> :
+        {...this.props}
+        onClickSave={this.onClickSave}
+        onClickCancel={this.onClickCancel}
+        onClickDelete={this.onClickDelete}
+        onClickReset={this.onClickReset}/> :
       <Timer
-        {...this.props} />
+        {...this.props}
+        onClickEdit={this.onClickEdit} />
   }
 }
-
-Card.propTypes = {
-  id: PropTypes.string,
-  title: PropTypes.string,
-  project: PropTypes.string,
-  elapsed: PropTypes.number,
-  runningSince: PropTypes.number
-};
 
 export default Card;

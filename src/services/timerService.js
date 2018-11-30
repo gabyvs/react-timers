@@ -1,3 +1,18 @@
+import uuid from 'uuid';
+
+/* Helper functions for timers CRUD */
+function newTimer(attrs = {}) {
+  const timer = {
+    title: attrs.title || 'Timer',
+    project: attrs.project || 'Project',
+    id: uuid.v4(),
+    elapsed: 0,
+  };
+
+  return timer;
+}
+
+/* Helper functions for displaying time */
 function renderElapsedString(elapsed, runningSince) {
   let totalElapsed = elapsed;
   if (runningSince) {
@@ -27,7 +42,8 @@ function pad(numberString, size) {
 }
 
 const TimerService = {
-  renderElapsedString
+  renderElapsedString,
+  newTimer
 };
 
 export default TimerService;

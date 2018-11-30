@@ -11,10 +11,22 @@ class Create extends React.Component {
     this.setState({ isActive: true});
   };
 
+  onClickSave = (timer) => {
+    this.props.onClickSave(timer);
+    this.setState({ isActive: false });
+  };
+
+  onClickCancel = () => {
+    this.setState({ isActive: false });
+  };
+
   render() {
     if (this.state.isActive) {
       return (
-        <Edit />
+        <Edit
+          {...this.props}
+          onClickSave={this.onClickSave}
+          onClickCancel={this.onClickCancel} />
       );
     } else {
       return (
