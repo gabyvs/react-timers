@@ -1,26 +1,34 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Edit from '../Edit/Edit';
 import './Create.css';
 
-const Create = (props) => {
-  if (props.isActive) {
-    return (
-      <Edit />
-    );
-  } else {
-    return (
-      <div className="create">
-        <button className="btn btn-primary create-button" type="button">
-          <i className="fas fa-plus create-icon"></i>
-        </button>
-      </div>
-    )
-  }
-};
+class Create extends React.Component {
+  state = {
+    isActive: false
+  };
 
-Create.propTypes = {
-  isActive: PropTypes.bool
-};
+  activateCreate = () => {
+    this.setState({ isActive: true});
+  };
+
+  render() {
+    if (this.state.isActive) {
+      return (
+        <Edit />
+      );
+    } else {
+      return (
+        <div className="create">
+          <button
+            onClick={this.activateCreate}
+            className="btn btn-primary create-button"
+            type="button">
+            <i className="fas fa-plus create-icon"></i>
+          </button>
+        </div>
+      )
+    }
+  }
+}
 
 export default Create;

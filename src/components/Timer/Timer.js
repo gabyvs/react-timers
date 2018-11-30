@@ -27,6 +27,7 @@ const Timer = (props) => {
 };
 
 Timer.propTypes = {
+  id: PropTypes.string,
   title: PropTypes.string,
   project: PropTypes.string,
   elapsed: PropTypes.number,
