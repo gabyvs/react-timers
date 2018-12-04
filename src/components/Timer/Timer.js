@@ -16,10 +16,13 @@ class Timer extends React.Component {
     clearInterval(this.forceUpdateInterval);
   }
 
-  onClickComponent = () => {
+  onClickComponent = (e) => {
+    // Using e.preventDefault was not working.
+    let willEdit = e.target.name === 'more';
+    if (willEdit) return;
     if (this.state.isRunning) {
       this.props.onTimerStop(this.props.id);
-    } else {
+    } else if (!willEdit) {
       this.props.onTimerStart(this.props.id);
     }
     this.setState({
@@ -27,8 +30,7 @@ class Timer extends React.Component {
     });
   };
 
-  onClickEdit = (e) => {
-    e.preventDefault();
+  onClickEdit = () => {
     this.props.onClickEdit();
   };
 
@@ -44,6 +46,7 @@ class Timer extends React.Component {
           !this.state.isRunning &&
           <button
             className="more"
+            name="more"
             onClick={this.onClickEdit}>
             <i className="fas fa-ellipsis-h more-icon"></i>
           </button>
@@ -61,15 +64,15 @@ class Timer extends React.Component {
 }
 
 Timer.propTypes = {
-  id: PropTypes.string,
-  title: PropTypes.string,
-  project: PropTypes.string,
-  elapsed: PropTypes.number,
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  project: PropTypes.string.isRequired,
+  elapsed: PropTypes.number.isRequired,
   runningSince: PropTypes.number,
   isRunning: PropTypes.bool,
-  onClickEdit: PropTypes.func,
-  onTimerStart: PropTypes.func,
-  onTimerStop: PropTypes.func
+  onClickEdit: PropTypes.func.isRequired,
+  onTimerStart: PropTypes.func.isRequired,
+  onTimerStop: PropTypes.func.isRequired
 };
 
 export default Timer;

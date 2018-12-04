@@ -1,6 +1,7 @@
-import React from 'react';
-import Timer from '../Timer/Timer';
-import Edit from '../Edit/Edit';
+import React     from 'react';
+import PropTypes from 'prop-types';
+import Timer     from '../Timer/Timer';
+import Edit      from '../Edit/Edit';
 
 class Card extends React.Component {
   state = {
@@ -43,5 +44,11 @@ class Card extends React.Component {
         onClickEdit={this.onClickEdit} />
   }
 }
+
+Card.propTypes = {
+  onClickSave: PropTypes.func.isRequired,
+  onClickDelete: PropTypes.func.isRequired,
+  onClickReset: PropTypes.func.isRequired
+};
 
 export default Card;

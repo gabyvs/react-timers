@@ -39,6 +39,8 @@ class Edit extends React.Component {
             <input
               type="text"
               name="title"
+              required={true}
+              autoFocus={true}
               value={this.state.title}
               onChange={this.onChange} />
           </div>
@@ -47,6 +49,7 @@ class Edit extends React.Component {
             <input
               type="text"
               name="project"
+              required={true}
               value={this.state.project}
               onChange={this.onChange}/>
           </div>
@@ -81,8 +84,8 @@ class Edit extends React.Component {
 Edit.propTypes = {
   title: PropTypes.string,
   project: PropTypes.string,
-  onClickCancel: PropTypes.func,
-  onClickSave: PropTypes.func,
+  onClickCancel: PropTypes.func.isRequired,
+  onClickSave: PropTypes.func.isRequired,
   onClickDelete: PropTypes.func,
   onClickReset: PropTypes.func
 };
