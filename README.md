@@ -1,3 +1,11 @@
+This is a React project with basic timers functionality.
+
+A user can:
+
+- Add new timers by pressing the + button
+- Start and stop timers by pressing each timer
+- Edit a timer by pressing the "..." (more) button
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
