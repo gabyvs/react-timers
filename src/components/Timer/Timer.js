@@ -37,6 +37,13 @@ class Timer extends React.Component {
   render() {
     const elapsedStr = TimerService.renderElapsedString(this.props.elapsed, this.props.runningSince);
     const timerClass = this.state.isRunning ? 'timer running' : 'timer';
+    const title = this.props.title ?
+      <div className="title">{this.props.title}</div> :
+      <div className="empty">(no title)</div>;
+    const project = this.props.project ?
+      <div className="project">{this.props.project}</div> :
+      <div className="empty">(no project)</div>;
+
 
     return (
       <div
@@ -55,8 +62,8 @@ class Timer extends React.Component {
           <span>{elapsedStr}</span>
         </div>
         <div className="lower">
-          <div className="title">{this.props.title}</div>
-          <div className="project">{this.props.project}</div>
+          {title}
+          {project}
         </div>
       </div>
     );

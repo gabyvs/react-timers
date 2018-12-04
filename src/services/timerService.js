@@ -3,8 +3,8 @@ import uuid from 'uuid';
 /* Helper functions for timers CRUD */
 function newTimer(attrs = {}) {
   const timer = {
-    title: attrs.title || 'Timer',
-    project: attrs.project || 'Project',
+    title: attrs.title,
+    project: attrs.project,
     id: uuid.v4(),
     elapsed: 0,
   };

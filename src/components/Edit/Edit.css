@@ -42,6 +42,11 @@
   border: 1px solid var(--focus);
 }
 
+.timer .empty {
+  color: var(--secondary-text);
+  opacity: .4;
+}
+
 .edit .button-row {
   display: flex;
   justify-content: space-around;
